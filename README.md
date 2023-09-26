@@ -1,18 +1,29 @@
-## EigenTrajectory: Low-Rank Descriptors for Multi-Modal Trajectory Forecasting
-This repository contains the code for the EigenTrajectory(𝔼𝕋) space applied to the traditional Euclidean-based trajectory predictors.
+<!--## EigenTrajectory: Low-Rank Descriptors for Multi-Modal Trajectory Forecasting-->
+<h2 align="center">EigenTrajectory:&thinsp;Low&hairsp;&#x0335;&hairsp;Rank&thinsp;Descriptors&thinsp;for&thinsp;Multi&hairsp;&#x0335;&hairsp;Modal&thinsp;Trajectory&thinsp;Forecasting</h2>
+<p align="center">
+  <a href="https://InhwanBae.github.io/"><strong>Inhwan Bae</strong></a>
+  ·  
+  <a href="https://www.cs.cmu.edu/~./jeanoh/"><strong>Jean Oh</strong></a>
+  ·
+  <a href="https://scholar.google.com/citations?user=Ei00xroAAAAJ"><strong>Hae-Gon Jeon</strong></a>
+  <br>
+  ICCV 2023
+</p>
 
-**[EigenTrajectory: Low-Rank Descriptors for Multi-Modal Trajectory Forecasting](https://inhwanbae.github.io/publication/eigentrajectory/)**
-<br>
-<a href="https://InhwanBae.github.io/">Inhwan Bae</a>,
-<a href="https://www.cs.cmu.edu/~./jeanoh/">Jean Oh</a> and
-<a href="https://scholar.google.com/citations?user=Ei00xroAAAAJ">Hae-Gon Jeon</a>
-<br>Accepted to 
-<a href="https://iccv2023.thecvf.com/">ICCV 2023</a>
+<p align="center">
+  <a href="https://inhwanbae.github.io/publication/eigentrajectory/"><strong><code>Project Page</code></strong></a>
+  <a href="https://iccv2023.thecvf.com/"><strong><code>ICCV 2023</code></strong></a>
+  <a href="https://arxiv.org/abs/2307.09306"><strong><code>arXiv Paper</code></strong></a>
+  <a href="https://github.com/InhwanBae/EigenTrajectory"><strong><code>Source Code</code></strong></a>
+</p>
 
 <div align='center'>
-  <img src="img/eigentrajectory-model.svg" width=70%>
+  <br><img src="img/eigentrajectory-animated.gif" width=70%>
+  <!--<img src="img/eigentrajectory-model.svg" width=70%>-->
   <br>A common pipeline of trajectory prediction models and the proposed EigenTrajectory.
 </div>
+
+<br>This repository contains the code for the EigenTrajectory(𝔼𝕋) space applied to the 10 traditional Euclidean-based trajectory predictors.
 
 
 ## 🌌 EigenTrajectory(𝔼𝕋) Space 🌌
