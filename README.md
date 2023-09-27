@@ -12,9 +12,9 @@
 
 <p align="center">
   <a href="https://inhwanbae.github.io/publication/eigentrajectory/"><strong><code>Project Page</code></strong></a>
-  <a href="https://iccv2023.thecvf.com/"><strong><code>ICCV 2023</code></strong></a>
-  <a href="https://arxiv.org/abs/2307.09306"><strong><code>arXiv Paper</code></strong></a>
+  <a href="https://arxiv.org/abs/2307.09306"><strong><code>ICCV Paper</code></strong></a>
   <a href="https://github.com/InhwanBae/EigenTrajectory"><strong><code>Source Code</code></strong></a>
+  <a href="#-citation"><strong><code>Related Works</code></strong></a>
 </p>
 
 <div align='center'>
@@ -25,6 +25,7 @@
 
 <br>This repository contains the code for the EigenTrajectory(𝔼𝕋) space applied to the 10 traditional Euclidean-based trajectory predictors.
 
+<br>
 
 ## 🌌 EigenTrajectory(𝔼𝕋) Space 🌌
 * A novel trajectory descriptor based on Singular Value Decomposition (SVD), provides an alternative to traditional methods.
@@ -32,6 +33,7 @@
 * A new anchor-based refinement method to effectively encompass all potential futures.
 * It can significantly improve existing standard trajectory predictors by simply replacing the Euclidean space.
 
+<br>
 
 ## Model Training
 ### Setup
@@ -85,6 +87,7 @@ If you want to train the model with custom hyper-parameters, use `trainval.py` i
 python trainval.py --cfg <config_file_path> --tag <experiment_tag> --gpu_id <gpu_id> 
 ```
 
+<br>
 
 ## Model Evaluation
 ### Pretrained Models
@@ -110,9 +113,10 @@ If you want to evaluate the model individually, you can use `trainval.py` with c
 python trainval.py --test --cfg <config_file_path> --tag <experiment_tag> --gpu_id <gpu_id> 
 ```
 
+<br>
 
 ## 📖 Citation
-If you find this code useful for your research, please cite our papers :)
+If you find this code useful for your research, please cite our trajectory prediction papers :)
 
 [**`DMRGCN (AAAI'21)`**](https://github.com/InhwanBae/DMRGCN) **|** 
 [**`NPSN (CVPR'22)`**](https://github.com/InhwanBae/NPSN) **|** 
@@ -161,5 +165,9 @@ If you find this code useful for your research, please cite our papers :)
 }
 ```
 </details>
+
+### Acknowledgement
+Part of our code is borrowed from [AgentFormer](https://github.com/Khrylx/AgentFormer), [DMRGCN](https://github.com/InhwanBae/DMRGCN), [GP-Graph](https://github.com/InhwanBae/GPGraph), [Graph-TERN](https://github.com/InhwanBae/GraphTERN), [Implicit](https://github.com/abduallahmohamed/Social-Implicit), [LB-EBM](https://github.com/bpucla/lbebm), [PECNet](https://github.com/HarshayuGirase/Human-Path-Prediction/tree/master/PECNet), [SGCN](https://github.com/shuaishiliu/SGCN/tree/0ff25cedc04852803787196e83c0bb941d724fc2) and [Social-STGCNN](https://github.com/abduallahmohamed/Social-STGCNN/tree/ebd57aaf34d84763825d05cf9d4eff738d8c96bb).
+We thank the authors for releasing their code and models.
 
 <br>
