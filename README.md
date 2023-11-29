@@ -24,6 +24,7 @@
 </div>
 
 <br>This repository contains the code for the EigenTrajectory(𝔼𝕋) space applied to the 10 traditional Euclidean-based trajectory predictors.
+<br>EigenTrajectory-LB-EBM achieves ADE/FDE of 0.21/0.34 while requiring only 1 hour for training! 
 
 <br>
 
@@ -63,7 +64,7 @@ You can also download the dataset by running the following script.
 [**Social-STGCNN**](https://arxiv.org/abs/2002.11927). 
 We have included model source codes from their official GitHub in the `./baselines/` folder. 
 
-If you want to add your own baseline model, simply paste the model code into the baseline folder and add a few lines of [initialization constructor](https://github.com/InhwanBae/EigenTrajectory/blob/main/baselines/pecnet/__init__.py) and [bridge](https://github.com/InhwanBae/EigenTrajectory/blob/main/baselines/pecnet/bridge.py) code.
+If you want to add your own baseline model, simply paste the model code into the baseline folder and add a few lines of [initialization constructor](https://github.com/InhwanBae/EigenTrajectory/blob/main/baseline/pecnet/__init__.py) and [bridge](https://github.com/InhwanBae/EigenTrajectory/blob/main/baseline/pecnet/bridge.py) code.
 
 ### Train EigenTrajectory
 To train our EigenTrajectory on the ETH and UCY datasets at once, we provide a bash script `train.sh` for a simplified execution.
@@ -125,10 +126,10 @@ If you find this code useful for your research, please cite our trajectory predi
 [**`EigenTrajectory (ICCV'23)`**](https://github.com/InhwanBae/EigenTrajectory)
 
 ```bibtex
-@article{bae2023eigentrajectory,
+@inproceedings{bae2023eigentrajectory,
   title={EigenTrajectory: Low-Rank Descriptors for Multi-Modal Trajectory Forecasting},
   author={Bae, Inhwan and Oh, Jean and Jeon, Hae-Gon},
-  journal={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
   year={2023}
 }
 ```
