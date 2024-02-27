@@ -119,11 +119,13 @@ python trainval.py --test --cfg <config_file_path> --tag <experiment_tag> --gpu_
 ## 📖 Citation
 If you find this code useful for your research, please cite our trajectory prediction papers :)
 
-[**`DMRGCN (AAAI'21)`**](https://github.com/InhwanBae/DMRGCN) **|** 
-[**`NPSN (CVPR'22)`**](https://github.com/InhwanBae/NPSN) **|** 
-[**`GP-Graph (ECCV'22)`**](https://github.com/InhwanBae/GPGraph) **|** 
-[**`Graph-TERN (AAAI'23)`**](https://github.com/InhwanBae/GraphTERN) **|** 
-[**`EigenTrajectory (ICCV'23)`**](https://github.com/InhwanBae/EigenTrajectory)
+[**`💬 LMTrajectory (ICCV'23) 🗨️`**](https://github.com/InhwanBae/LMTrajectory) **|**
+[**`1️⃣ SingularTrajectory (ICCV'23) 1️⃣`**](https://github.com/InhwanBae/SingularTrajectory) **|**
+[**`🌌 EigenTrajectory (ICCV'23) 🌌`**](https://github.com/InhwanBae/EigenTrajectory) **|** 
+[**`🚩 Graph‑TERN (AAAI'23) 🚩`**](https://github.com/InhwanBae/GraphTERN) **|**
+[**`🧑‍🤝‍🧑 GP‑Graph (ECCV'22) 🧑‍🤝‍🧑`**](https://github.com/InhwanBae/GPGraph) **|**
+[**`🎲 NPSN (CVPR'22) 🎲`**](https://github.com/InhwanBae/NPSN) **|**
+[**`🧶 DMRGCN (AAAI'21) 🧶`**](https://github.com/InhwanBae/DMRGCN)
 
 ```bibtex
 @inproceedings{bae2023eigentrajectory,
@@ -137,18 +139,25 @@ If you find this code useful for your research, please cite our trajectory predi
   <summary>More Information (Click to expand)</summary>
 
 ```bibtex
-@article{bae2021dmrgcn,
-  title={Disentangled Multi-Relational Graph Convolutional Network for Pedestrian Trajectory Prediction},
-  author={Bae, Inhwan and Jeon, Hae-Gon},
-  journal={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2021}
+@inproceedings{bae2024lmtrajectory,
+  title={Can Language Beat Numerical Regression? Language-Based Multimodal Trajectory Prediction},
+  author={Bae, Inhwan and Lee, Junoh and Jeon, Hae-Gon},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2024}
 }
 
-@inproceedings{bae2022npsn,
-  title={Non-Probability Sampling Network for Stochastic Human Trajectory Prediction},
-  author={Bae, Inhwan and Park, Jin-Hwi and Jeon, Hae-Gon},
+@inproceedings{bae2024singulartrajectory,
+  title={SingularTrajectory: Universal Trajectory Predictor Using Diffusion Model},
+  author={Bae, Inhwan and Park, Young-Jae and Jeon, Hae-Gon},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  year={2022}
+  year={2024}
+}
+
+@article{bae2023graphtern,
+  title={A Set of Control Points Conditioned Pedestrian Trajectory Prediction},
+  author={Bae, Inhwan and Jeon, Hae-Gon},
+  journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2023}
 }
 
 @inproceedings{bae2022gpgraph,
@@ -158,11 +167,18 @@ If you find this code useful for your research, please cite our trajectory predi
   year={2022}
 }
 
-@article{bae2023graphtern,
-  title={A Set of Control Points Conditioned Pedestrian Trajectory Prediction},
+@inproceedings{bae2022npsn,
+  title={Non-Probability Sampling Network for Stochastic Human Trajectory Prediction},
+  author={Bae, Inhwan and Park, Jin-Hwi and Jeon, Hae-Gon},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2022}
+}
+
+@article{bae2021dmrgcn,
+  title={Disentangled Multi-Relational Graph Convolutional Network for Pedestrian Trajectory Prediction},
   author={Bae, Inhwan and Jeon, Hae-Gon},
   journal={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2023}
+  year={2021}
 }
 ```
 </details>
