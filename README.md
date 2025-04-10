@@ -23,16 +23,18 @@
   <br>A common pipeline of trajectory prediction models and the proposed EigenTrajectory.
 </div>
 
-<br>This repository contains the code for the EigenTrajectory(𝔼𝕋) space applied to the 10 traditional Euclidean-based trajectory predictors.
-<br>EigenTrajectory-LB-EBM achieves ADE/FDE of 0.21/0.34 while requiring only 1 hour for training! 
+<br>**Summary**: A general **low-rank descriptor** that forms a **compact spatio-temporal representation** for pedestrian movement, **significantly improving** prediction accuracy and reliability in **off-the-shelf** trajectory prediction **models**.
+
+This repository contains the code for the EigenTrajectory(𝔼𝕋) space applied to the **10 traditional** (Euclidean-based) **trajectory predictors**.
+<br>EigenTrajectory-LB-EBM achieves ADE/FDE of 0.21/0.34 while requiring only 1 hour for training!
 
 <br>
 
 ## 🌌 EigenTrajectory(𝔼𝕋) Space 🌌
-* A novel trajectory descriptor based on Singular Value Decomposition (SVD), provides an alternative to traditional methods.
-* It employs a low-rank approximation to reduce the complexity and creates a compact space to represent pedestrian movements.
-* A new anchor-based refinement method to effectively encompass all potential futures.
-* It can significantly improve existing standard trajectory predictors by simply replacing the Euclidean space.
+* **Singular Value Decomposition**: A novel trajectory descriptor based on SVD, provides an alternative to traditional methods.
+* **Low-Rank Descriptor**: It employs a low-rank approximation to reduce the complexity and creates a compact space to represent pedestrian movements.
+* **Anchor-Based Method**: A new anchor-based refinement method to effectively encompass all potential futures.
+* **Interchangeability**: It can significantly improve existing standard trajectory predictors by simply replacing the Euclidean space.
 
 <br>
 
@@ -119,6 +121,7 @@ python trainval.py --test --cfg <config_file_path> --tag <experiment_tag> --gpu_
 ## 📖 Citation
 If you find this code useful for your research, please cite our trajectory prediction papers :)
 
+[**`🏢🚶‍♂️ CrowdES (CVPR'25) 🏃‍♀️🏠`**](https://github.com/InhwanBae/Crowd-Behavior-Generation) **|**
 [**`💬 LMTrajectory (CVPR'24) 🗨️`**](https://github.com/InhwanBae/LMTrajectory) **|**
 [**`1️⃣ SingularTrajectory (CVPR'24) 1️⃣`**](https://github.com/InhwanBae/SingularTrajectory) **|**
 [**`🌌 EigenTrajectory (ICCV'23) 🌌`**](https://github.com/InhwanBae/EigenTrajectory) **|** 
@@ -135,10 +138,17 @@ If you find this code useful for your research, please cite our trajectory predi
   year={2023}
 }
 ```
-<details>
+<details open>
   <summary>More Information (Click to expand)</summary>
 
 ```bibtex
+@inproceedings{bae2025crowdes,
+  title={Continuous Locomotive Crowd Behavior Generation},
+  author={Bae, Inhwan and Lee, Junoh and Jeon, Hae-Gon},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2025}
+}
+
 @inproceedings{bae2024lmtrajectory,
   title={Can Language Beat Numerical Regression? Language-Based Multimodal Trajectory Prediction},
   author={Bae, Inhwan and Lee, Junoh and Jeon, Hae-Gon},
