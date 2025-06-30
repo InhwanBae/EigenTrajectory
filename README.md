@@ -126,13 +126,13 @@ python trainval.py --test --cfg <config_file_path> --tag <experiment_tag> --gpu_
 
 ## Model Visualization
 ### EigenTrajectory descriptor (Figure 3) 
-You can visualize the EigenTrajectory descriptor by running the following script. Thanks [`@pengqianhan`](https://github.com/pengqianhan)!
+You can visualize the EigenTrajectory descriptor by running the following script. Thanks [@pengqianhan](https://github.com/pengqianhan)!
 ```bash
 python ./script/plot_fig3.py
 ```
 
 ### Coefficients and t-SNE
-You can visualize the EigenTrajectory coefficients for individual trajectories, as well as the t-SNE embedding of coefficients for all trajectories, by running the following script. Thanks [`@pengqianhan`](https://github.com/pengqianhan)!
+You can visualize the EigenTrajectory coefficients for individual trajectories, as well as the t-SNE embedding of coefficients for all trajectories, by running the following script. Thanks [@pengqianhan](https://github.com/pengqianhan)!
 ```bash
 python ./script/plot_coeff_tsne.py
 ```
