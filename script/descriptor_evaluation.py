@@ -1,7 +1,10 @@
+import os
 import sys
 import argparse
 import numpy as np
 import torch
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from EigenTrajectory import TrajNorm
 from CurveModel import *
 from utils import *
@@ -10,13 +13,9 @@ from utils import *
 # Reproducibility
 reproducibility_settings(seed=0)
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--obs_len', type=int, default=8)
-parser.add_argument('--pred_len', type=int, default=12)
-
 
 def eval_method(args):
-    data_set = '../datasets/' + args.dataset + '/'
+    data_set = './datasets/' + args.dataset + '/'
     print('Scene: {}'.format(args.dataset))
 
     args.batch_size = 1e8
@@ -114,9 +113,12 @@ def eval_method(args):
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--obs_len', type=int, default=8)
+    parser.add_argument('--pred_len', type=int, default=12)
     args = parser.parse_args()
+    
     dataset_all = ["eth", "hotel", "univ", "zara1", "zara2"]
-
     for scene in dataset_all:
         args.dataset = scene
         eval_method(args)

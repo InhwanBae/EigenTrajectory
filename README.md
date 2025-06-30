@@ -49,7 +49,7 @@ The train/validation/test splits are the same as those fond in [Social-GAN](http
 
 You can also download the dataset by running the following script.
 ```bash
-./scripts/download_datasets.sh
+./script/download_datasets.sh
 ```
 
 **Baseline models**
@@ -71,11 +71,11 @@ If you want to add your own baseline model, simply paste the model code into the
 ### Train EigenTrajectory
 To train our EigenTrajectory on the ETH and UCY datasets at once, we provide a bash script `train.sh` for a simplified execution.
 ```bash
-./scripts/train.sh
+./script/train.sh
 ```
 We provide additional arguments for experiments: 
 ```bash
-./scripts/train.sh -t <experiment_tag> -b <baseline_model> -c <config_file_path> -p <config_file_prefix> -d <space_seperated_dataset_string> -i <space_seperated_gpu_id_string>
+./script/train.sh -t <experiment_tag> -b <baseline_model> -c <config_file_path> -p <config_file_prefix> -d <space_seperated_dataset_string> -i <space_seperated_gpu_id_string>
 
 # Supported baselines: agentformer, dmrgcn, gpgraphsgcn, gpgraphstgcnn, graphtern, implicit, lbebm, pecnet, sgcn, stgcnn
 # Supported datasets: eth, hotel, univ, zara1, zara2
@@ -97,18 +97,24 @@ python trainval.py --cfg <config_file_path> --tag <experiment_tag> --gpu_id <gpu
 We provide pretrained models in the [**release section**](https://github.com/InhwanBae/EigenTrajectory/releases/tag/v1.0). 
 You can download all pretrained models at once by running the script. This will download the 10 EigenTrajectory models.
 ```bash
-./scripts/download_pretrained_models.sh
+./script/download_pretrained_models.sh
 ```
 
-### Evaluate EigenTrajectory
+### Evaluate Descriptors (Table 1)
+To compare the trajectory approximation accuracy of each descriptor, we provide a python script `descriptor_evaluation.py` which evaluates the descriptors on the ETH and UCY datasets.
+```bash
+python ./script/descriptor_evaluation.py
+```
+
+### Evaluate EigenTrajectory (Table 2)
 To evaluate our EigenTrajectory at once, we provide a bash script `test.sh` for a simplified execution.
 ```bash
-./scripts/test.sh -t <experiment_tag> -b <baseline_model> -c <config_file_path> -p <config_file_prefix> -d <space_seperated_dataset_string> -i <space_seperated_gpu_id_string>
+./script/test.sh -t <experiment_tag> -b <baseline_model> -c <config_file_path> -p <config_file_prefix> -d <space_seperated_dataset_string> -i <space_seperated_gpu_id_string>
 
 # Examples
-./scripts/test.sh -b sgcn -d "hotel" -i "1"
-./scripts/test.sh -b agentformer -t EigenTrajectory -d "zara2" -i "2"
-./scripts/test.sh -b pecnet -c ./config/ -p eigentrajectory -d "eth hotel univ zara1 zara2" -i "0 0 0 0 0"
+./script/test.sh -b sgcn -d "hotel" -i "1"
+./script/test.sh -b agentformer -t EigenTrajectory -d "zara2" -i "2"
+./script/test.sh -b pecnet -c ./config/ -p eigentrajectory -d "eth hotel univ zara1 zara2" -i "0 0 0 0 0"
 ```
 
 If you want to evaluate the model individually, you can use `trainval.py` with custom hyper-parameters. 
@@ -118,10 +124,26 @@ python trainval.py --test --cfg <config_file_path> --tag <experiment_tag> --gpu_
 
 <br>
 
+## Model Visualization
+### EigenTrajectory descriptor (Figure 3) 
+You can visualize the EigenTrajectory descriptor by running the following script. Thanks [`@pengqianhan`](https://github.com/pengqianhan)!
+```bash
+python ./script/plot_fig3.py
+```
+
+### Coefficients and t-SNE
+You can visualize the EigenTrajectory coefficients for individual trajectories, as well as the t-SNE embedding of coefficients for all trajectories, by running the following script. Thanks [`@pengqianhan`](https://github.com/pengqianhan)!
+```bash
+python ./script/plot_coeff_tsne.py
+```
+
+<br>
+
 ## 📖 Citation
 If you find this code useful for your research, please cite our trajectory prediction papers :)
 
 [**`🏢🚶‍♂️ CrowdES (CVPR'25) 🏃‍♀️🏠`**](https://github.com/InhwanBae/Crowd-Behavior-Generation) **|**
+[**`💭 VLMTrajectory (TPAMI) 💭`**](https://github.com/InhwanBae/LMTrajectory) **|**
 [**`💬 LMTrajectory (CVPR'24) 🗨️`**](https://github.com/InhwanBae/LMTrajectory) **|**
 [**`1️⃣ SingularTrajectory (CVPR'24) 1️⃣`**](https://github.com/InhwanBae/SingularTrajectory) **|**
 [**`🌌 EigenTrajectory (ICCV'23) 🌌`**](https://github.com/InhwanBae/EigenTrajectory) **|** 
@@ -146,6 +168,13 @@ If you find this code useful for your research, please cite our trajectory predi
   title={Continuous Locomotive Crowd Behavior Generation},
   author={Bae, Inhwan and Lee, Junoh and Jeon, Hae-Gon},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2025}
+}
+
+@article{bae2025vlmtrajectory,
+  title={Social Reasoning-Aware Trajectory Prediction via Multimodal Language Model},
+  author={Bae, Inhwan and Lee, Junoh and Jeon, Hae-Gon},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
   year={2025}
 }
 
